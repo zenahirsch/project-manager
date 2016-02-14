@@ -1,0 +1,8 @@
+<ul class="list-group">
+    {{#projects}}
+        <li id={{this._id}} class="list-group-item">
+            <h4 class="list-group-item-heading"><a href={{this.url}}>{{this.name}}</a></h4>
+            <p class="minor">{{this.description}}</p>
+        </li>
+    {{/projects}}
+</ul>

@@ -1,0 +1,32 @@
+<section id="manager">
+
+    <!-- Projects Table -->
+    <table class="table" id="manager-table">
+        {{#projects}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td><button type="button" data-id={{this._id}} class="btn btn-block btn-default">Edit</button></td>
+                <td><button type="button" data-id={{this._id}} class="btn btn-block btn-danger delete-project">Delete</button></td>
+            </tr>
+        {{/projects}}
+    </table>
+
+    <!-- Buttons -->
+    <button type="button" id="add-project-button" class="btn btn-primary" data-toggle="modal" data-target="#addProject">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Add Project
+    </button>
+    <button type="button" class="btn btn-link">Display Projects</button>
+
+    <!-- "Add Project" Modal -->
+    <div class="modal fade" id="addProject" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    {{> add-form}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
