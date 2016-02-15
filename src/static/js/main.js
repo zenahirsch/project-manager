@@ -20,4 +20,11 @@ $(document).ready(function () {
             deleteProject($(this).data('id'));
         }
     });
+
+    $('#project-tabs a:first').tab('show');
+
+    $('#project-tabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
 });

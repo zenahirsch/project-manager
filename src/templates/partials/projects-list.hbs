@@ -1,8 +1,28 @@
-<ul class="list-group">
+<section id="projects-list">
     {{#projects}}
-        <li id={{this._id}} class="list-group-item">
-            <h4 class="list-group-item-heading"><a href={{this.url}}>{{this.name}}</a></h4>
-            <p class="minor">{{this.description}}</p>
-        </li>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="panel-title" class="h4">
+                <strong>{{name}}</strong>
+            </span>
+            <!-- {{#tools}}
+            <span class="label label-default">{{.}}</span>
+            {{/tools}} -->
+            <div class="links">
+                <span class="glyphicon glyphicon-link"></span>
+                <a href="{{url}}" class="small">View</a>
+                <img class="github-mark" src="/img/github.png" />
+                <a href="{{githubUrl}}" class="small">GitHub</a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <p class="minor">{{description}}</p>
+            <div class="info">
+                {{#tools}}
+                <span class="label label-default">{{.}}</span>
+                {{/tools}}
+            </div>
+        </div>
+    </div>
     {{/projects}}
-</ul>
+</div>
