@@ -30,7 +30,8 @@ router.get('/manager', function (req, res) {
 router.post('/manager', function (req, res) {
     var db = req.db;
     var projects = db.get('projects');
-
+    console.log(req);
+    console.log(req.body);
     var project = {
         'name': req.body.name,
         'description': req.body.description,
