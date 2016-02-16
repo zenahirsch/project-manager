@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var moment = require('moment');
 
 // Middleware
 var handlebars = require('./src/middleware/handlebars.js');
