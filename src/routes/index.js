@@ -2,11 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
+    res.render('main', {});
+});
+
+router.get('/projects', function (req, res) {
     var db = req.db;
     var projects = db.get('projects');
 
     projects.find({}, {}, function (e, docs) {
-        res.render('main', {
+        res.render('projects', {
             'projects': docs
         });
     });

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     var deleteProject = function (id) {
         $.ajax({
             url: '/manager',

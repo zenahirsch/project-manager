@@ -34,7 +34,7 @@ module.exports = function (req, res, next) {
         if (layout_path && !req.query.ajax) {
             var compiled_layout = getTemplate(layout_path);
             res.end(compiled_layout({
-                title: 'Project Manager',
+                title: 'Zena Hirsch',
                 content: template(vars)
             }));
         } else {
