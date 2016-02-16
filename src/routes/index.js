@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var moment = require('moment');
 
 router.get('/', function (req, res) {
     res.render('main', {});
@@ -30,7 +31,7 @@ router.get('/manager', function (req, res) {
 router.post('/manager', function (req, res) {
     var db = req.db;
     var projects = db.get('projects');
-    
+
     var project = {
         'name': req.body.name,
         'description': req.body.description,
