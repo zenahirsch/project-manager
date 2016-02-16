@@ -1,3 +1,3 @@
-# project-manager
+# zenaland
 
-A tool for documenting and displaying projects.
+My personal website. http://zena.land
