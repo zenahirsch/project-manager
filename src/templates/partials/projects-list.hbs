@@ -5,14 +5,15 @@
             <span class="panel-title" class="h4">
                 <strong>{{name}}</strong>
             </span>
-            <!-- {{#tools}}
-            <span class="label label-default">{{.}}</span>
-            {{/tools}} -->
             <div class="links">
+                {{#if url}}
                 <span class="glyphicon glyphicon-link"></span>
                 <a href="{{url}}" class="small">View</a>
+                {{/if}}
+                {{#if githubUrl}}
                 <img class="github-mark" src="/img/github.png" />
                 <a href="{{githubUrl}}" class="small">GitHub</a>
+                {{/if}}
             </div>
         </div>
         <div class="panel-body">
