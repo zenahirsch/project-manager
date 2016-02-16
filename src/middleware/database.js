@@ -1,5 +1,5 @@
 var mongo = require('mongodb');
-var db = require('monk')('localhost:27017/project-manager');
+var db = require('monk')(process.env.MONGOLAB_URI);
 
 module.exports = function(req, res, next) {
     req.db = db;
